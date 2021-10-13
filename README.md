@@ -1,2 +1,3 @@
 # chat-pop-up-window
-Created with CodeSandbox
+
+Chat pop up window widget for react.

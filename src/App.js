@@ -3,53 +3,53 @@ import "./styles.css";
 
 const getWidgetContainerClassName = (isOpened) => {
   let className = "";
-  className = "rcw-widget-container ";
+  className = "rcpw-widget-container ";
 
   if (isOpened) {
-    className = className.concat("rcw-opened ");
+    className = className.concat("rcpw-opened ");
   }
   return className;
 };
 
 const getWidgetLauncherClassName = (isOpened) => {
   let className = "";
-  className = "rcw-launcher ";
+  className = "rcpw-launcher ";
 
   if (isOpened) {
-    className = className.concat("rcw-hide-launcher ");
+    className = className.concat("rcpw-hide-launcher ");
   }
   return className;
 };
 
 const getConversationContainerClassName = (isOpened) => {
   let className = "";
-  className = "rcw-conversation-container ";
+  className = "rcpw-conversation-container ";
   if (!isOpened) {
-    className = className.concat("rcw-conversation-container-hide ");
+    className = className.concat("rcpw-conversation-container-hide ");
   }
   return className;
 };
 
 const getMessageContainerClassName = (isOpened) => {
   let className = "";
-  className = "rcw-messages-container";
+  className = "rcpw-messages-container";
   return className;
 };
 
 const getLauncherOpenClassName = (isOpened) => {
   let className = "";
-  className = "rcw-open-launcher ";
+  className = "rcpw-open-launcher ";
   if (isOpened) {
-    className = "rcw-open-launcher-hide ";
+    className = "rcpw-open-launcher-hide ";
   }
   return className;
 };
 
 const getLauncherCloseClassName = (isOpened) => {
   let className = "";
-  className = "rcw-close-launcher ";
+  className = "rcpw-close-launcher ";
   if (!isOpened) {
-    className = "rcw-close-launcher-hide ";
+    className = "rcpw-close-launcher-hide ";
   }
   return className;
 };
@@ -57,11 +57,11 @@ const getLauncherCloseClassName = (isOpened) => {
 const Content = (props) => {
   return (
     <div className={getConversationContainerClassName(props.isOpened)}>
-      <div className="rcw-header">
-        <button className="rcw-close-button" onClick={() => {}}>
+      <div className="rcpw-header">
+        <button className="rcpw-close-button" onClick={() => {}}>
           <img
             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMzU3IDM1NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzU3IDM1NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnIGlkPSJjbGVhciI+CgkJPHBvbHlnb24gcG9pbnRzPSIzNTcsMzUuNyAzMjEuMywwIDE3OC41LDE0Mi44IDM1LjcsMCAwLDM1LjcgMTQyLjgsMTc4LjUgMCwzMjEuMyAzNS43LDM1NyAxNzguNSwyMTQuMiAzMjEuMywzNTcgMzU3LDMyMS4zICAgICAyMTQuMiwxNzguNSAgICIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="
-            className="rcw-close"
+            className="rcpw-close"
             alt="close"
             onClick={() => {
               console.debug(props.isOpened);
@@ -75,26 +75,26 @@ const Content = (props) => {
         id="messages"
         className={getMessageContainerClassName(props.isOpened)}
       >
-        <div className="rcw-message">
-          <div className="rcw-response">
-            <div className="rcw-message-text">
+        <div className="rcpw-message">
+          <div className="rcpw-response">
+            <div className="rcpw-message-text">
               <p>Welcome to this awesome chat!</p>
             </div>
           </div>
         </div>
       </div>
-      <form className="rcw-sender">
+      <form className="rcpw-sender">
         <input
           type="text"
-          className="rcw-new-message"
+          className="rcpw-new-message"
           name="message"
           placeholder="Type a message..."
           autoComplete="off"
         />
-        <button type="submit" className="rcw-send">
+        <button type="submit" className="rcpw-send">
           <img
             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNTM1LjUgNTM1LjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUzNS41IDUzNS41OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGcgaWQ9InNlbmQiPgoJCTxwb2x5Z29uIHBvaW50cz0iMCw0OTcuMjUgNTM1LjUsMjY3Ljc1IDAsMzguMjUgMCwyMTYuNzUgMzgyLjUsMjY3Ljc1IDAsMzE4Ljc1ICAgIiBmaWxsPSIjY2JjYmNiIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg=="
-            className="rcw-send-icon"
+            className="rcpw-send-icon"
             alt="send"
           />
         </button>
